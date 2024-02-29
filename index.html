@@ -3,25 +3,109 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Number guessing game</title>
-    <script type= "text/javascript" src="./RockPaperScissors.js"></script>
+    <title>Game of R, P, S</title>
+    <script type= "text/javascript" defer src="./TOP_RockPaperScissors.js"></script>
 
     <style>
       html {
-        font-family: sans-serif;
+        font-family:'Times New Roman', Times, serif;
       }
       body {
         width: 50%;
-        max-width: 800px;
+        max-width: 1000px;
         min-width: 480px;
         margin: 0 auto;
       }
-      .lastResult {
-        color: white;
-        padding: 3px;
+
+      .header, .initiation{
+        text-align: center;
+        font-size: x-large;
+        margin-top: 30px ;
+        margin-bottom: 30px ;
       }
+
+      .point-info{
+        display: flex;
+        justify-content: space-between;
+        margin:  30px 0 80px 0;
+      }
+
+      .pointInfoCompliment{
+        display: flex;
+        font-size: xx-large;
+        font-weight: 700;
+        align-items: center;
+
+      }
+
+      .tile-choice{
+        display: flex;
+        border: 2px solid black;
+        border-radius: 10px;
+        justify-content: space-around;
+        margin-bottom: 60px;
+        align-items: center;
+        padding : 30px;
+      }
+
+      .tile{
+        display: flex;
+        padding:10px;
+        flex-direction: column;
+      }
+
+
+     .scoring {
+        border: 2px solid black;
+        border-radius: 10px;
+        width: 140px;
+        height: 100px;
+        text-align: center;
+      }
+
+      .tile-img{
+        width: 100px;
+        padding-bottom: 20px;
+      }
+
+      .startGame{
+        background-color: rgb(162, 149, 149);
+        font-size: large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        border-radius: 10px;
+        padding: 10px;
+        border: solid black 2px; 
+      }
+
+
+
     </style>
   </head>
 
-  <body></body>
+  <body>
+    <div class ="header">
+      <h1>Rock Paper Scissors</h1>
+      <div>This is a 5 Round Game</div>
+    </div>
+    
+
+    <div class = "point-info">
+      <div class = "scoring" id = "player"><p id = "pScore">Your Score:</p></div>
+      <div class = "pointInfoCompliment"></div>
+      <div class = "scoring" id = "computer"><p id = "cScore">Computer Score:</p></div>
+
+
+    </div>
+
+    <div class = "tile-choice">
+      <div class = "tile"><img class = "tile-img" src ="images/Rock.jpg" alt = "A fist"><button class = "choiceBtn" id = "rock">ROCK</button></div>
+      <div class = "tile"><img class = "tile-img" src ="images/Paper.jpg" alt = "An open hand"><button class = "choiceBtn" id = "paper">PAPER</button></div>
+      <div class = "tile"><img class = "tile-img" src ="images/Scissors.jpg" alt = "A two finger peace sign"><button class = "choiceBtn" id = "scissors">SCISSORS</button></div>
+    </div>
+
+    <div class = "initiation">
+      <button class = "startGame">Start/Reset</button> 
+    </div>
+  </body>
   </html>
